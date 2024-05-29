@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/load.css">
+    <script>
+        var process='<%= (type==0&&sound!=2)?process:''%>';
+        var score='<%= (type==0&&sound==2)?score:''%>';
+    </script>
+    <script type="text/javascript" src="/javascripts/SCP.js"></script>
+    <script type="text/javascript" src="/javascripts/main.js"></script>
+</head>
+<body>
+    <div class="intro">学号:<%= id%>&emsp;&emsp;姓名:<%= name%>&emsp;&emsp;队伍:<%= objname%></div>
+    <div class="okmess" style="<%= (type==1||(type==0&&sound==2))?'':'display: none'%>">
+        <div class="oktitle"><%= (type==1||(type==0&&sound!=2))?'比赛通道关闭':zscore+'分'%></div>
+        <div class="okdes"><%= (type==1||(type==0&&sound!=2))?'目前比赛通道处于关闭状态，如果在比赛过程中出现此信息请联系比赛组织者':'你的文字录入比赛成绩已出！中英文混合录入成绩'+nscore+'分;中文听写录入成绩'+score+'分;总分为'+zscore+'分！'%></div>
+    </div>
+    <div class="main" style="<%= (type==0&&sound!=2)?'':'display: none'%>">
+        <div class="message">
+            <span class="warn">注意：</span>比赛音频只能播放一次，播放过程不可以暂停，如果你的电脑发生了意外，请不要担心，你可以重新打开此页面，你的进度和文字仍然存在。<br/>
+            请在比赛宣布开始时点击播放按钮，在下面文本框中输入你所听到的内容，当录入完毕后，点击“提交”按钮上传你录入的文字，如果你准备好了，那就点击播放按钮，开始听录吧！
+        </div>
+        <div class="audiotool">
+            <button class="boxbtn" id="boxbtn" disabled="disabled" onclick="boxok()">加载中</button>
+            <audio ontimeupdate="timeload()" onloadedmetadata='preaudio()' preload="auto" src="<%= (type==0&&sound!=2)?audio:''%>" id="sound"></audio>
+            <progress id="bar" class="outter" value="0" max="100"></progress>
+            <div class="process" id="process">0.00%</div>
+        </div>
+        <textarea class="content" id="content"><%= (type==0&&sound!=2)?txt:''%></textarea>
+        <div class="edittools">
+            <button class="toolbtn" onclick="Adsize()">增大字体</button>
+            <button class="toolbtn" onclick="Desize()">缩小字体</button>
+            <button class="submitbtn" onclick="submit()">提交并查看成绩</button>
+        </div>
+    </div>
+    <div class="showss" id="messshow"></div>
+    <div class="slice" id="showload" style="visibility: hidden">
+        <div class="slide"></div>
+        <div class="loadtips" id="loadtips"></div>
+    </div>
+</body>
+</html>

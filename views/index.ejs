@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>登录</title>
+  <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body>
+  <div class="login_model">
+    <div class="title">大连东软信息学院2023年文字录入大赛决赛</div>
+    <article class="message">
+      <div class="message_inhere">
+        请在登录前仔细阅读以下注意事项：<br>
+        1.比赛时长为15分钟，将有两段语速不等的语音播放，每段5分钟，选手在下方的文本框中输入所听到的文字。<br>
+        2.在每段间，将有2分钟的休息时间，在此期间选手可以任意更改输入的文字。<br>
+        3.音频播放完毕即为比赛结束，选手应在1分钟内点击提交按钮提交输入文本。<br>
+        4.登陆后，音频播放只有一次，选手不可以在音频播放后再次刷新界面，否则遗失的声音选手自己承担责任。<br>
+        5.在操作时有任何问题，请联系周边裁判。
+      </div>
+    </article>
+    <div class="info_model">
+      <div class="info_item">
+        <label class="label">比赛账号</label>
+        <input class="input" placeholder="比赛账号" type="text" name="name" id="name">
+      </div>
+      <div class="info_item">
+        <label class="label">比赛密码</label>
+        <input class="input" placeholder="比赛密码" type="password" name="pass" id="pass">
+      </div>
+      <div class="info_item">
+        <button id="submit" class="button" onclick="logincall()">登录</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="/javascripts/SCP.js"></script>
+<script type="text/javascript" src="/javascripts/index.js"></script>
+</html>

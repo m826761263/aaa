@@ -1,0 +1,97 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.leftmodel{
+    width: 45%;
+}
+.rightmodel{
+    margin-left: 1%;
+    width: 54%;
+    overflow-y:auto;
+    height: 100%;
+}
+.datamodel{
+    width: 100%;
+    height: 102px;
+    display: flex;
+    flex-direction: row;
+}
+.dataitem{
+    height: 100%;
+    width: 150px;
+    margin: 0 auto;
+    border: 1px solid #5f5f5f;
+}
+.dataitem_title{
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}
+.dataitem_des{
+    text-align: center;
+    font-size: 14px;
+    color: #545454;
+    font-weight: 900;
+}
+.btntools{
+    height: 25px;
+    width: 100%;
+    margin-top: 20px;
+}
+.button{
+    height: 100%;
+    width: 90px;
+    margin-left: 20px;
+    background-color: #8d95dc;
+    color: white;
+    border: 0;
+    outline: none;
+}
+.input{
+    width: 100%;
+    margin-top: 20px;
+    outline: none;
+}
+.textarea{
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    outline: none;
+    resize: vertical;
+}
+.customers{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    border-collapse:collapse;
+    border:1px solid;
+}
+.customers td, .customers th{
+    color: #404040;
+    font-size:13px;
+    text-align: center;
+    border:1px solid #d5e0d5;
+    padding:3px 7px 2px 7px;
+}
+.customers th{
+    text-align: center;
+    font-size:13px;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color: #6798e0;
+    color:#ffffff;
+}
+.customers tr.alt td {
+    color: #404040;
+    font-size:13px;
+    text-align: center;
+    background-color: #c7def2;
+}

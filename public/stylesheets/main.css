@@ -1,0 +1,170 @@
+html {
+    background: #efefef no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro {
+    background: -webkit-gradient(linear, right top, left top, from(#b06ab3), to(#4568dc));
+    background: linear-gradient(270deg, #b06ab3 0, #4568dc);
+    color: white;
+    width: 30%;
+    text-align: center;
+    height: 35px;
+    font-size: 16px;
+    line-height:35px;
+    min-width: 550px;
+}
+
+.main {
+    width: 95%;
+    z-index: 0;
+    margin:auto;
+    background-color: white;
+    height: 90%;
+}
+
+.message{
+    width: 96%;
+    margin: 10px auto;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.audiotool{
+    display: flex;
+    width: calc(96% + 12px);
+    margin: 0 auto;
+    height: 28px;
+}
+
+.boxbtn{
+    height: 25px;
+    margin: auto 0;
+    border: 0;
+    color: white;
+    background-color: #8d95dc;
+    width: 80px;
+    font-size: 13px;
+    line-height: 25px;
+    outline: none;
+}
+.boxbtn:hover{
+    background-color:#4568dc;
+}
+
+.outter {
+    margin: auto 0 auto 10px;
+    width: 94%;
+}
+
+progress{
+    height: 10px;
+    border-radius: 0;
+    background-color: #efefef;
+}
+progress::-webkit-progress-bar {
+    background: #efefef;
+}
+progress::-webkit-progress-value  {
+    background: #8d95dc;
+}
+
+.process{
+    line-height: 25px;
+    margin-left: 15px;
+    color: #8d95dc;
+}
+
+.content{
+    margin: 10px calc(2% - 6px) 0;
+    width: 96%;
+    height: calc(100% - 160px);
+    padding: 5px;
+    font-size: 18px;
+    resize: none;
+    font-family: 微软雅黑, serif;
+    outline: none;
+    color: #5f5f5f;
+    line-height: 1.8;
+}
+
+.edittools{
+    width: calc(96% + 12px);
+    height: 30px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.toolbtn{
+    height: 26px;
+    margin: auto 10px auto 0;
+    border: 0;
+    color: #fff4e1;
+    background-color: #42b54f;
+    width: 80px;
+    outline: none;
+}
+
+.submitbtn{
+    margin: auto 0 auto auto;
+    height: 26px;
+    border: 0;
+    color: white;
+    background-color: #5e69dc;
+    width: 120px;
+    outline: none;
+}
+
+.warn {
+    font-weight: bold;
+    color: red;
+}
+
+.okmess{
+    height: 400px;
+    width: 80%;
+    margin: 60px auto 0;
+    background-color: white;
+}
+
+.oktitle{
+    height: 120px;
+    color: #8d95dc;
+    line-height: 120px;
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.okdes{
+    text-align: center;
+    height: 80px;
+    line-height: 40px;
+    width: 70%;
+    color: #5f5f5f;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.showss{
+    position: fixed;
+    right: 0;
+    top:0;
+    height: 35px;
+    width: 100px;
+    line-height: 35px;
+    font-size:16px;
+    color:white;
+    text-align: center;
+}

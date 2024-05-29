@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>后台管理</title>
+  <link rel="stylesheet" href="/stylesheets/adm.css">
+  <link rel="stylesheet" href="/stylesheets/load.css">
+</head>
+<body>
+  <div class="leftmodel">
+    <div class="datamodel">
+      <div class="dataitem" style="margin-left: 0">
+        <div class="dataitem_title" style="color: crimson"><%= info.nosize%></div>
+        <div class="dataitem_des">未开始</div>
+      </div>
+      <div class="dataitem">
+        <div class="dataitem_title" style="color:dodgerblue"><%= info.startsize%></div>
+        <div class="dataitem_des">进行中</div>
+      </div>
+      <div class="dataitem">
+        <div class="dataitem_title" style="color: #38c043"><%= info.endsize%></div>
+        <div class="dataitem_des">已提交</div>
+      </div>
+      <div class="dataitem" style="margin-right: 0">
+        <div class="dataitem_title" style="color: #b06ab3"><%= info.number%></div>
+        <div class="dataitem_des">全部数</div>
+      </div>
+    </div>
+    <div class="btntools">
+      <button class="button"  style="margin-left: 0" onclick="setaudio('<%= seturl%>')">设置题库</button>
+      <button class="button" onclick="insert('<%= add%>')">导入名单</button>
+      <button class="button" onclick="remove('<%= remove%>')">删除学生</button>
+      <button class="button" onclick="upload('<%= upscore%>')">导入成绩</button>
+      <button class="button" onclick="sets('<%= settype%>')">重置状态</button>
+      <button class="button"  style="margin-right: 0" onclick="opena('<%= open%>')">开闭通道</button>
+    </div>
+    <input class="input" id="Zinput"></input>
+    <textarea class="textarea" id="Ztextarea"></textarea>
+  </div>
+  <div class="rightmodel">
+    <table class="customers" id="customers"></table>
+  </div>
+  <div class="slice" id="showload" style="visibility: hidden">
+    <div class="slide"></div>
+    <div class="loadtips" id="loadtips"></div>
+  </div>
+</body>
+<script type="text/javascript" src="/javascripts/SCP.js"></script>
+<script type="text/javascript" src="/javascripts/adm.js"></script>
+</html>
